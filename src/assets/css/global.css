@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dark-mode {
+    background-color: var(--color-background-body-dark);
+    color: var(--color-text-dark);
+}
+
+.light-mode {
+    background-color: var(--color-background-body-light);
+    color: var(--color-text-light);
+}
