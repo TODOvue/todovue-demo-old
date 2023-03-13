@@ -1,6 +1,9 @@
 <template>
   <div :class="`${theme}-mode`">
-    <div class="demo-container" :class="`${theme}-mode`">
+    <div
+      class="demo-container"
+      :class="`${invertTheme ? themeInvert : theme}-mode`"
+    >
       <div class="demo-container_theme">
         <tv-button is-rounded @click="toggleTheme">Change Theme</tv-button>
       </div>
@@ -17,9 +20,16 @@
 import TvButton from "todovue-button";
 export default {
   name: "DemoPage",
+  props: {
+    invertTheme: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       theme: "dark",
+      themeInvert: "invert-dark",
     };
   },
   components: {
@@ -27,6 +37,10 @@ export default {
   },
   methods: {
     toggleTheme() {
+      if (this.invertTheme) {
+        this.themeInvert =
+          this.themeInvert === "invert-dark" ? "invert-light" : "invert-dark";
+      }
       this.theme = this.theme === "dark" ? "light" : "dark";
     },
   },
@@ -46,6 +60,14 @@ export default {
 
 .demo-container.light-mode {
   background-color: var(--color-background-card-light);
+}
+
+.demo-container.invert-dark-mode {
+  background-color: var(--color-background-card-light);
+}
+
+.demo-container.invert-light-mode {
+  background-color: var(--color-background-card-dark);
 }
 
 .demo-container_theme {

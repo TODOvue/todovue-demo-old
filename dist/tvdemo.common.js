@@ -334,7 +334,7 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(797);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=template&id=17ea5cc0
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=template&id=3d1de17c
 
 const _hoisted_1 = {
   class: "demo-container_theme"
@@ -350,7 +350,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", {
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(`${$data.theme}-mode`)
   }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(["demo-container", `${$data.theme}-mode`])
+    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(["demo-container", `${$props.invertTheme ? $data.themeInvert : $data.theme}-mode`])
   }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(_component_tv_button, {
     "is-rounded": "",
     onClick: $options.toggleTheme
@@ -359,7 +359,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
   }, 8, ["onClick"])]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_2, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_3, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "default")])])], 2)], 2);
 }
-;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=template&id=17ea5cc0
+;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=template&id=3d1de17c
 
 // EXTERNAL MODULE: ./node_modules/todovue-button/dist/tvbutton.common.js
 var tvbutton_common = __webpack_require__(8);
@@ -368,9 +368,16 @@ var tvbutton_common_default = /*#__PURE__*/__webpack_require__.n(tvbutton_common
 
 /* harmony default export */ var TvDemovue_type_script_lang_js = ({
   name: "DemoPage",
+  props: {
+    invertTheme: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
-      theme: "dark"
+      theme: "dark",
+      themeInvert: "invert-dark"
     };
   },
   components: {
@@ -378,16 +385,19 @@ var tvbutton_common_default = /*#__PURE__*/__webpack_require__.n(tvbutton_common
   },
   methods: {
     toggleTheme() {
+      if (this.invertTheme) {
+        this.themeInvert = this.themeInvert === "invert-dark" ? "invert-light" : "invert-dark";
+      }
       this.theme = this.theme === "dark" ? "light" : "dark";
     }
   }
 });
 ;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=style&index=0&id=17ea5cc0&lang=css
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=style&index=0&id=3d1de17c&lang=css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=style&index=0&id=17ea5cc0&lang=css
+;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=style&index=0&id=3d1de17c&lang=css
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(89);
