@@ -2,7 +2,9 @@
   <div :class="`${theme}-mode`">
     <div
       class="demo-container"
-      :class="`${invertTheme ? themeInvert : theme}-mode`"
+      :class="`${
+        !hideBackground ? (invertTheme ? themeInvert : theme) : ''
+      }-mode`"
     >
       <div class="demo-container_theme">
         <tv-button is-rounded @click="toggleTheme">Change Theme</tv-button>
@@ -24,6 +26,10 @@ export default {
     invertTheme: {
       type: Boolean,
       default: false,
+    },
+    hideBackground: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
