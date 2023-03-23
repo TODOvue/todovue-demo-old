@@ -344,7 +344,7 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(203);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=template&id=54caa4dc
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=template&id=f3431546
 
 const _hoisted_1 = {
   class: "demo-container_theme"
@@ -369,7 +369,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
   }, 8, ["onClick"])]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_2, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_3, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "default")])])], 2)], 2);
 }
-;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=template&id=54caa4dc
+;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=template&id=f3431546
 
 // EXTERNAL MODULE: ./node_modules/todovue-button/dist/tvbutton.common.js
 var tvbutton_common = __webpack_require__(880);
@@ -385,7 +385,7 @@ var tvbutton_common_default = /*#__PURE__*/__webpack_require__.n(tvbutton_common
     },
     hideBackground: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   data() {
@@ -408,10 +408,10 @@ var tvbutton_common_default = /*#__PURE__*/__webpack_require__.n(tvbutton_common
 });
 ;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-54.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-54.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=style&index=0&id=54caa4dc&lang=css
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-54.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-54.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=style&index=0&id=f3431546&lang=css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=style&index=0&id=54caa4dc&lang=css
+;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=style&index=0&id=f3431546&lang=css
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(620);
