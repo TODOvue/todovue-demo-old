@@ -1,7 +1,5 @@
 import { createApp } from "vue";
 import TvDemo from "./component/TvDemo.vue";
-import "todovue-button/dist/tvbutton.css";
-import "@/assets/css/variables.css";
-import "@/assets/css/global.css";
+import "todovue-css/dist/todovue.css";
 
 createApp(TvDemo).mount("#todovue-demo");

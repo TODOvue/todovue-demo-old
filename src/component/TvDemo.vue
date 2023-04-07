@@ -1,17 +1,43 @@
 <template>
   <div :class="`${theme}-mode`">
     <div
-      class="demo-container"
+      class="tv-demo-body"
       :class="`${
         !hideBackground ? (invertTheme ? themeInvert : theme) : ''
       }-mode`"
     >
-      <div class="demo-container_theme">
-        <tv-button is-rounded @click="toggleTheme">Change Theme</tv-button>
+      <div class="tv-demo-theme">
+        <button
+          class="tv-btn tv-btn-small tv-btn-info tv-btn-rounded tv-btn-outlined"
+          @click="toggleTheme"
+        >
+          Change Theme
+        </button>
       </div>
-      <div class="demo-container_case">
-        <div class="demo-container_case-demo">
-          <slot></slot>
+      <div class="tv-demo-case">
+        <div class="tv-demo-case-demo">
+          <template v-if="variants">
+            <select class="tv-demo-select" v-model="selectedVariantIndex">
+              <option
+                class="tv-demo-option"
+                v-for="(variant, index) in variants"
+                :key="variant.title"
+                :value="index"
+              >
+                {{ variant.title }}
+              </option>
+            </select>
+            <div class="tv-demo-component">
+              <component :is="component" v-bind="variant.propsData">
+                Press me
+              </component>
+            </div>
+          </template>
+          <template v-else>
+            <h1 class="tv-demo-no-component">
+              Here are the different variations of the TODOvue components.
+            </h1>
+          </template>
         </div>
       </div>
     </div>
@@ -19,7 +45,6 @@
 </template>
 
 <script>
-import TvButton from "todovue-button";
 export default {
   name: "DemoPage",
   props: {
@@ -31,15 +56,21 @@ export default {
       type: Boolean,
       default: false,
     },
+    component: {
+      type: Object,
+      default: null,
+    },
+    variants: {
+      type: Array,
+      default: null,
+    },
   },
   data() {
     return {
       theme: "dark",
       themeInvert: "invert-dark",
+      selectedVariantIndex: 0,
     };
-  },
-  components: {
-    TvButton,
   },
   methods: {
     toggleTheme() {
@@ -50,57 +81,12 @@ export default {
       this.theme = this.theme === "dark" ? "light" : "dark";
     },
   },
+  computed: {
+    variant() {
+      return this.variants[this.selectedVariantIndex];
+    },
+  },
 };
 </script>
 
-<style>
-.demo-container {
-  width: 80%;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-.demo-container.dark-mode {
-  background-color: var(--color-background-card-dark);
-}
-
-.demo-container.light-mode {
-  background-color: var(--color-background-card-light);
-}
-
-.demo-container.invert-dark-mode {
-  background-color: var(--color-background-card-light);
-}
-
-.demo-container.invert-light-mode {
-  background-color: var(--color-background-card-dark);
-}
-
-.demo-container_theme {
-  width: 100%;
-  min-height: 100%;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.demo-container_case {
-  padding: 0 20px 20px 20px;
-}
-
-.demo-container_case-demo .title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.demo-container_case-demo .demo {
-  margin-bottom: 20px;
-}
-
-.demo-container_case-demo h2 {
-  margin-bottom: 5px;
-  font-size: 22px;
-}
-</style>
+<style scoped></style>
