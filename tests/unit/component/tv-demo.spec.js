@@ -1,5 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
 import TvDemo from "@/component/TvDemo.vue";
+import { HighCode } from "vue-highlight-code";
 
 describe("TvDemo Component", () => {
   describe("Test in template", () => {
@@ -194,6 +195,18 @@ describe("TvDemo Component", () => {
       });
 
       expect(wrapper.vm.variant).toEqual(variants[selectedVariantIndex]);
+    });
+  });
+
+  describe("HighCode", () => {
+    test("registers HighCode component", () => {
+      const wrapper = shallowMount(TvDemo, {
+        components: {
+          HighCode,
+        },
+      });
+
+      expect(wrapper.vm.$options.components.HighCode).toBeTruthy();
     });
   });
 });

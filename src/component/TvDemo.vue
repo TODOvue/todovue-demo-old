@@ -32,6 +32,15 @@
                 Press me
               </component>
             </div>
+            <HighCode
+              class="code tv-demo-code"
+              :codeValue="variant.html"
+              theme="dark"
+              lang="html"
+              codeLines
+              :key="variant.title"
+              height="auto"
+            ></HighCode>
           </template>
           <template v-else>
             <h1 class="tv-demo-no-component">
@@ -45,6 +54,8 @@
 </template>
 
 <script>
+import { HighCode } from "vue-highlight-code";
+
 export default {
   name: "DemoPage",
   props: {
@@ -85,6 +96,9 @@ export default {
     variant() {
       return this.variants[this.selectedVariantIndex];
     },
+  },
+  components: {
+    HighCode,
   },
 };
 </script>

@@ -28,8 +28,10 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "todovue-css": "^1.1.1",
-    "vue": "^3.2.13"
+    "highlight.js": "^11.7.0",
+    "todovue-css": "^1.2.0",
+    "vue": "^3.2.13",
+    "vue-highlight-code": "^0.1.16"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
