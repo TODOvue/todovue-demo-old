@@ -1702,7 +1702,7 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(7203);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=template&id=4ff7c08f
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=template&id=5941234c
 
 const _hoisted_1 = {
   class: "tv-demo-theme"
@@ -1741,10 +1741,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       key: variant.title,
       value: index
     }, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.toDisplayString)(variant.title), 9, _hoisted_4);
-  }), 128))], 512), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vModelSelect, $data.selectedVariantIndex]]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_5, [((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createBlock)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveDynamicComponent)($props.component), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeProps)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.guardReactiveProps)($options.variant.propsData)), {
-    default: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withCtx)(() => [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)(" Press me ")]),
-    _: 1
-  }, 16))]), ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createBlock)(_component_HighCode, {
+  }), 128))], 512), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vModelSelect, $data.selectedVariantIndex]]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_5, [((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createBlock)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveDynamicComponent)($props.component), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeProps)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.guardReactiveProps)($options.variant.propsData)), null, 16))]), ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createBlock)(_component_HighCode, {
     class: "code tv-demo-code",
     codeValue: $options.variant.html,
     theme: "dark",
@@ -1754,7 +1751,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     height: "auto"
   }, null, 8, ["codeValue"]))], 64)) : ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("h1", _hoisted_6, " Here are the different variations of the TODOvue components. "))])])], 2)], 2);
 }
-;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=template&id=4ff7c08f
+;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=template&id=5941234c
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__(7658);
