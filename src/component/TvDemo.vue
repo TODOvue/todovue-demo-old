@@ -28,9 +28,7 @@
               </option>
             </select>
             <div class="tv-demo-component">
-              <component :is="component" v-bind="variant.propsData">
-                Press me
-              </component>
+              <component :is="component" v-bind="variant.propsData"></component>
             </div>
             <HighCode
               class="code tv-demo-code"
