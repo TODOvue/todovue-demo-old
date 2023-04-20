@@ -20,7 +20,7 @@
             <select
               class="tv-demo-select"
               v-model="selectedVariantIndex"
-              v-if="variants > 1"
+              v-if="variants.length > 1"
             >
               <option
                 class="tv-demo-option"

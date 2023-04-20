@@ -1,5 +1,9 @@
 # Changelog **TODOvue Demo**
 
+## v2.2.1
+### Fixes
+* The length property is added to the variant
+
 ## v2.2.0
 ### Dependencies Update
 * Update `todovue-css` to v1.3.0
