@@ -1,6 +1,6 @@
 {
   "name": "todovue-demo",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "private": false,
   "main": "dist/tvdemo.common.js",
   "author": "Cristhian Daza",
