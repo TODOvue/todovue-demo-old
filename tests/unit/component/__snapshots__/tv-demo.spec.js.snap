@@ -3,7 +3,7 @@
 exports[`TvDemo Component Test in template matches snapshot 1`] = `
 <div class="dark-mode">
   <div class="tv-demo-body dark-mode">
-    <div class="tv-demo-theme"><button class="tv-btn tv-btn-small tv-btn-info tv-btn-rounded tv-btn-outlined"> Change Theme </button></div>
+    <div class="tv-demo-theme"><button class="tv-btn tv-btn-small tv-btn-info tv-btn-rounded"> Change Theme </button></div>
     <div class="tv-demo-case">
       <div class="tv-demo-case-demo">
         <h1 class="tv-demo-no-component"> Here are the different variations of the TODOvue components. </h1>

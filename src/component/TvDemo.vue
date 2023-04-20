@@ -8,7 +8,7 @@
     >
       <div class="tv-demo-theme">
         <button
-          class="tv-btn tv-btn-small tv-btn-info tv-btn-rounded tv-btn-outlined"
+          class="tv-btn tv-btn-small tv-btn-info tv-btn-rounded"
           @click="toggleTheme"
         >
           Change Theme
@@ -17,7 +17,11 @@
       <div class="tv-demo-case">
         <div class="tv-demo-case-demo">
           <template v-if="variants">
-            <select class="tv-demo-select" v-model="selectedVariantIndex">
+            <select
+              class="tv-demo-select"
+              v-model="selectedVariantIndex"
+              v-if="variants > 1"
+            >
               <option
                 class="tv-demo-option"
                 v-for="(variant, index) in variants"
@@ -52,6 +56,7 @@
 </template>
 
 <script>
+import { ref, computed, onMounted } from "vue";
 import { HighCode } from "vue-highlight-code";
 
 export default {
@@ -74,26 +79,42 @@ export default {
       default: null,
     },
   },
-  data() {
-    return {
-      theme: "dark",
-      themeInvert: "invert-dark",
-      selectedVariantIndex: 0,
-    };
-  },
-  methods: {
-    toggleTheme() {
-      if (this.invertTheme) {
-        this.themeInvert =
-          this.themeInvert === "invert-dark" ? "invert-light" : "invert-dark";
+  setup(props) {
+    const theme = ref("dark");
+    const themeInvert = ref("invert-dark");
+    const selectedVariantIndex = ref(0);
+
+    onMounted(() => {
+      if (localStorage.getItem("theme")) {
+        theme.value = localStorage.getItem("theme");
       }
-      this.theme = this.theme === "dark" ? "light" : "dark";
-    },
-  },
-  computed: {
-    variant() {
-      return this.variants[this.selectedVariantIndex];
-    },
+    });
+
+    const toggleTheme = () => {
+      if (themeInvert.value) {
+        themeInvert.value =
+          themeInvert.value === "invert-dark" ? "invert-light" : "invert-dark";
+      }
+      theme.value = theme.value === "dark" ? "light" : "dark";
+
+      _handleStorageEvent({ key: "theme", newValue: theme.value });
+    };
+
+    const _handleStorageEvent = (event) => {
+      if (event.key === "theme") {
+        localStorage.setItem("theme", event.newValue);
+      }
+    };
+
+    const variant = computed(() => props.variants[selectedVariantIndex.value]);
+
+    return {
+      theme,
+      themeInvert,
+      selectedVariantIndex,
+      toggleTheme,
+      variant,
+    };
   },
   components: {
     HighCode,

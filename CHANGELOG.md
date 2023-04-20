@@ -1,5 +1,14 @@
 # Changelog **TODOvue Demo**
 
+## v2.2.0
+### Dependencies Update
+* Update `todovue-css` to v1.3.0
+### Features
+* The script is updated to Vue 3 (setup)
+* Theme is added to localStorage
+### Fixes
+* When there is only one variation of the component, it does not show the select
+
 ## v2.1.1
 ### Fixes
 * The slot that was by default is deleted
