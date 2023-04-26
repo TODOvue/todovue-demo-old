@@ -1702,7 +1702,7 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(7203);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=template&id=24059298
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvDemo.vue?vue&type=template&id=78577386
 
 const _hoisted_1 = {
   class: "tv-demo-theme"
@@ -1728,7 +1728,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(["tv-demo-body", `${!$props.hideBackground ? $props.invertTheme ? $setup.themeInvert : $setup.theme : ''}-mode`])
   }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("button", {
-    class: "tv-btn tv-btn-small tv-btn-info tv-btn-rounded",
+    class: "tv-btn tv-btn-small tv-btn-outlined tv-btn-rounded",
     onClick: _cache[0] || (_cache[0] = (...args) => $setup.toggleTheme && $setup.toggleTheme(...args))
   }, " Change Theme ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_2, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_3, [$props.variants ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_.Fragment, {
     key: 0
@@ -1745,14 +1745,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }), 128))], 512)), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vModelSelect, $setup.selectedVariantIndex]]) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_5, [((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createBlock)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveDynamicComponent)($props.component), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeProps)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.guardReactiveProps)($setup.variant.propsData)), null, 16))]), ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createBlock)(_component_HighCode, {
     class: "code tv-demo-code",
     codeValue: $setup.variant.html,
-    theme: "dark",
+    theme: $setup.theme,
+    langName: "vue",
     lang: "html",
     codeLines: "",
     key: $setup.variant.title,
     height: "auto"
-  }, null, 8, ["codeValue"]))], 64)) : ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("h1", _hoisted_6, " Here are the different variations of the TODOvue components. "))])])], 2)], 2);
+  }, null, 8, ["codeValue", "theme"]))], 64)) : ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("h1", _hoisted_6, " Here the different variations of the components will be shown. "))])])], 2)], 2);
 }
-;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=template&id=24059298
+;// CONCATENATED MODULE: ./src/component/TvDemo.vue?vue&type=template&id=78577386
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__(7658);
