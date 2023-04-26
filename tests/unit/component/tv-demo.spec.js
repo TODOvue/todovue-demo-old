@@ -74,7 +74,7 @@ describe("TvDemo Component", () => {
       const noComponentMessage = wrapper.find(".tv-demo-no-component");
       expect(noComponentMessage.exists()).toBe(true);
       expect(noComponentMessage.text()).toBe(
-        "Here are the different variations of the TODOvue components."
+        "Here the different variations of the components will be shown."
       );
     });
   });
@@ -179,7 +179,7 @@ describe("TvDemo Component", () => {
       // Assert
       expect(message.exists()).toBe(true);
       expect(message.text()).toBe(
-        "Here are the different variations of the TODOvue components."
+        "Here the different variations of the components will be shown."
       );
     });
 

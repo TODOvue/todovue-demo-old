@@ -8,7 +8,7 @@
     >
       <div class="tv-demo-theme">
         <button
-          class="tv-btn tv-btn-small tv-btn-info tv-btn-rounded"
+          class="tv-btn tv-btn-small tv-btn-outlined tv-btn-rounded"
           @click="toggleTheme"
         >
           Change Theme
@@ -37,7 +37,8 @@
             <HighCode
               class="code tv-demo-code"
               :codeValue="variant.html"
-              theme="dark"
+              :theme="theme"
+              langName="vue"
               lang="html"
               codeLines
               :key="variant.title"
@@ -46,7 +47,7 @@
           </template>
           <template v-else>
             <h1 class="tv-demo-no-component">
-              Here are the different variations of the TODOvue components.
+              Here the different variations of the components will be shown.
             </h1>
           </template>
         </div>
