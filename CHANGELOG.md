@@ -1,5 +1,11 @@
 # Changelog **TODOvue Demo**
 
+## v2.3.0
+### Dependencies Update
+* Update `todovue-css` to v1.7.0
+### Features
+* Responsive styles are added
+
 ## v2.2.1
 ### Fixes
 * The length property is added to the variant
