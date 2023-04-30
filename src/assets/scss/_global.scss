@@ -1,0 +1,66 @@
+@import 'mixins';
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include fontFamilyAndFontSize($font-family-text, 1rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include fontFamilyAndFontSize($font-family-title, 2rem);
+}
+
+.dark-mode {
+  @include backgroundColorAndTextColor($color-background-body-dark, $color-text-dark);
+  & body {
+    @include backgroundColorAndTextColor($color-background-body-dark, $color-text-dark);
+  }
+
+  & .tv-search-results {
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-background-card-dark;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: darken($color-background-card-dark, 10%);
+    }
+  }
+}
+
+.light-mode {
+  @include backgroundColorAndTextColor($color-background-body-light, $color-text-light);
+  & body {
+    @include backgroundColorAndTextColor($color-background-body-light, $color-text-light);
+  }
+
+  & .tv-search-results {
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-background-card-light;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: darken($color-background-card-light, 10%);
+    }
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: $color-text-button-light;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color-background-card-light;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: darken($color-background-card-light, 10%);
+}

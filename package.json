@@ -30,7 +30,6 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "highlight.js": "^11.7.0",
-    "todovue-css": "^1.7.0",
     "vue": "^3.2.13",
     "vue-highlight-code": "^0.1.16"
   },
@@ -49,6 +48,11 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^27.0.5",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "vue-loader": "^17.1.0",
+    "vue-template-compiler": "^2.7.14",
+    "webpack": "^5.81.0"
   }
 }
