@@ -8,8 +8,8 @@
           @change="toggleTheme"
         >
           <option class="tv-demo-option" disabled value="">Select theme</option>
-          <option class="tv-demo-option" value="Dark">Dark</option>
-          <option class="tv-demo-option" value="Light">Light</option>
+          <option class="tv-demo-option" value="dark">Dark</option>
+          <option class="tv-demo-option" value="light">Light</option>
         </select>
       </div>
       <div class="tv-demo-case">

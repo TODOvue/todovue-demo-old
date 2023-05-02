@@ -12,7 +12,7 @@ const useDemo = ({ variants }) => {
   });
 
   const toggleTheme = () => {
-    theme.value = selectedTheme.value.toLowerCase();
+    theme.value = selectedTheme.value;
 
     _handleStorageEvent({ key: "theme", newValue: theme.value });
   };
