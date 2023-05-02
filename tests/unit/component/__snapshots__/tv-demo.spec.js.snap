@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TvDemo Component Test in template matches snapshot 1`] = `
-<div class="dark-mode">
+<div class="dark-mode" inverttheme="false">
   <div class="tv-demo-body dark-mode">
-    <div class="tv-demo-theme"><button class="tv-btn tv-btn-small tv-btn-outlined tv-btn-rounded"> Change Theme </button></div>
+    <div class="tv-demo-theme"><select class="tv-demo-select tv-demo-select-theme">
+        <option class="tv-demo-option" disabled="" value="">Select theme</option>
+        <option class="tv-demo-option" value="Dark">Dark</option>
+        <option class="tv-demo-option" value="Light">Light</option>
+      </select></div>
     <div class="tv-demo-case">
       <div class="tv-demo-case-demo">
         <h1 class="tv-demo-no-component"> Here the different variations of the components will be shown. </h1>
