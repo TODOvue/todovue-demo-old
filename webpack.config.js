@@ -1,5 +1,4 @@
 const { VueLoaderPlugin } = require("vue-loader");
-
 module.exports = {
   module: {
     rules: [
@@ -7,11 +6,12 @@ module.exports = {
         test: /\.vue$/,
         loader: "vue-loader",
       },
-      {
-        test: /\.css$/,
-        use: ["vue-style-loader", "css-loader", "sass-loader"],
-      },
     ],
   },
   plugins: [new VueLoaderPlugin()],
+  output: {
+    filename: "tvdemo.js",
+    library: "Tvdemo",
+    libraryTarget: "umd",
+  },
 };
