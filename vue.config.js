@@ -15,7 +15,7 @@ module.exports = {
       umdNamedDefine: true,
     },
     externals: {
-      vue: "Vue",
+      vue: "vue",
     },
   },
 };

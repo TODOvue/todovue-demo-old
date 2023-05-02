@@ -14,7 +14,7 @@ module.exports = {
       config.output.libraryTarget = "umd";
       config.output.jsonpFunction = `webpackJsonp_${ctx.nuxt ? "nuxt" : "app"}`;
       config.externals = {
-        vue: "Vue",
+        vue: "vue",
       };
       if (ctx.isServer) {
         config.externals.splice(0, 0, (context, request, callback) => {
