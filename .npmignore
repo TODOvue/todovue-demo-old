@@ -1,8 +1,10 @@
 .github/
+.idea/
+coverage/
 public/
 src/
-test/
-.browserlistrc
+tests/
+.browserslistrc
 .eslintrc.js
 babel.config.js
 jest.config.js
