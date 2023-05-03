@@ -21,12 +21,12 @@
 - [License](https://github.com/TODOvue/todovue-demo/blob/master/LICENSE)
 
 ## Installation
-Install with npm or yarn
+Install with npm or yarn as development dependency
 ```bash
-npm install todovue-demo
+npm install todovue-demo --save-dev
 ```
 ```bash
-yarn add todovue-demo
+yarn add todovue-demo --dev
 ```
 
 Import
