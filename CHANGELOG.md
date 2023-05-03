@@ -1,5 +1,16 @@
 # Changelog **TODOvue Demo**
 
+## v3.0.0
+### Dependencies Update
+* The `todovue-css` component is removed
+### Features
+* The sass module is added to the project
+* The button is changed to a select when changing the theme
+* The option to invert the theme is removed
+* Separate the css of the component to a separate file
+* A composable is created for the demo
+* The `customStyle` property is created to customize the demo, with the background, the content and the color of the texts
+
 ## v2.3.0
 ### Dependencies Update
 * Update `todovue-css` to v1.7.0

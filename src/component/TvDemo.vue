@@ -1,18 +1,20 @@
 <template>
-  <div :class="`${theme}-mode`">
+  <div :class="`${theme}-mode`" :style="customStyle.body">
     <div
       class="tv-demo-body"
-      :class="`${
-        !hideBackground ? (invertTheme ? themeInvert : theme) : ''
-      }-mode`"
+      :class="`${!hideBackground ? theme : ''}-mode`"
+      :style="customStyle.content"
     >
       <div class="tv-demo-theme">
-        <button
-          class="tv-btn tv-btn-small tv-btn-outlined tv-btn-rounded"
-          @click="toggleTheme"
+        <select
+          class="tv-demo-select tv-demo-select-theme"
+          v-model="selectedTheme"
+          @change="toggleTheme"
         >
-          Change Theme
-        </button>
+          <option class="tv-demo-option" disabled value="">Select theme</option>
+          <option class="tv-demo-option" value="dark">Dark</option>
+          <option class="tv-demo-option" value="light">Light</option>
+        </select>
       </div>
       <div class="tv-demo-case">
         <div class="tv-demo-case-demo">
@@ -57,15 +59,20 @@
 </template>
 
 <script>
-import { ref, computed, onMounted } from "vue";
 import { HighCode } from "vue-highlight-code";
+import useDemo from "@/composable/useDemo";
 
 export default {
   name: "DemoPage",
   props: {
-    invertTheme: {
-      type: Boolean,
-      default: false,
+    demoStyle: {
+      type: Object,
+      default: () => {
+        return {
+          body: {},
+          content: {},
+        };
+      },
     },
     hideBackground: {
       type: Boolean,
@@ -81,40 +88,22 @@ export default {
     },
   },
   setup(props) {
-    const theme = ref("dark");
-    const themeInvert = ref("invert-dark");
-    const selectedVariantIndex = ref(0);
-
-    onMounted(() => {
-      if (localStorage.getItem("theme")) {
-        theme.value = localStorage.getItem("theme");
-      }
-    });
-
-    const toggleTheme = () => {
-      if (themeInvert.value) {
-        themeInvert.value =
-          themeInvert.value === "invert-dark" ? "invert-light" : "invert-dark";
-      }
-      theme.value = theme.value === "dark" ? "light" : "dark";
-
-      _handleStorageEvent({ key: "theme", newValue: theme.value });
-    };
-
-    const _handleStorageEvent = (event) => {
-      if (event.key === "theme") {
-        localStorage.setItem("theme", event.newValue);
-      }
-    };
-
-    const variant = computed(() => props.variants[selectedVariantIndex.value]);
-
-    return {
-      theme,
-      themeInvert,
+    const {
+      selectedTheme,
       selectedVariantIndex,
+      theme,
       toggleTheme,
       variant,
+      customStyle,
+    } = useDemo(props);
+
+    return {
+      selectedTheme,
+      selectedVariantIndex,
+      theme,
+      toggleTheme,
+      variant,
+      customStyle,
     };
   },
   components: {
@@ -123,4 +112,4 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss" src="../assets/scss/style.scss"></style>
