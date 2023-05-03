@@ -122,7 +122,7 @@ And you send that object to the component
   <tv-demo :component="component" :variants="demos" :demoStyle="demoStyle"></tv-demo>
 </template>
 ```
-And you send that object to the component
+You can send the colors for both `dark` and `light`, these values are optional, so you can send only one or not send any, then it will take the default color
 
 ## Development
 Clone the repository
@@ -147,7 +147,7 @@ yarn lint
 ```
 Run the build It is not necessary to generate build, since it is generated when you do PR to the master branch
 ```bash
-npm run build
+yarn build
 ```
 
 ## License
