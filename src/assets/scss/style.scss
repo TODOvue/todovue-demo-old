@@ -1,6 +1,4 @@
 @import "global.scss";
-@import "inheritance.scss";
-@import "mixins.scss";
 @import "variables.scss";
 
 .dark-mode {
@@ -26,9 +24,9 @@
 }
 
 .tv-demo-body {
-  @include size(height, 100vh, min);
-  @include size(width, 80%);
   margin: 0 auto;
+  min-height: 100vh;
+  width: 80%;
 
   &.dark-mode {
     background-color: $color-background-card-dark;
@@ -58,10 +56,10 @@
 
   & .tv-demo {
     &-theme {
-      @include size(height, 100%, min);
-      @include size(width, 100%);
       display: inline-block;
+      min-height: 100%;
       padding: 0 20px;
+      width: 100%;
     }
 
     &-case {
@@ -87,14 +85,14 @@
     }
 
     &-select {
-      @include borderRadius(4px);
-      @include size(height, 40px);
-      @include size(width, 100%);
+      border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
+      height: 40px;
       margin-bottom: 20px;
       margin-top: 20px;
       padding: 0 10px;
+      width: 100%;
       &-theme {
         width: 150px;
       }
@@ -105,9 +103,12 @@
     }
 
     &-component {
-      @extend %alignCenterFlex;
-      @include size(full, 100%);
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
       margin-top: 5px;
+      width: 100%;
     }
 
     &-no-component {
@@ -132,7 +133,7 @@
       padding: 0 10px 10px 10px !important;
     }
     &-body {
-      @include size(width, 90%);
+      width: 90%;
     }
   }
 }
@@ -143,7 +144,7 @@
       padding: 0 !important;
     }
     &-body {
-      @include size(width, 100%);
+      width: 100%;
     }
   }
 }
