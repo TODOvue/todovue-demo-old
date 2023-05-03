@@ -1,0 +1,149 @@
+@import "global.scss";
+@import "inheritance.scss";
+@import "mixins.scss";
+@import "variables.scss";
+
+.dark-mode {
+  & .tv-demo-select {
+    @include backgroundColorAndTextColor($color-background-card-light, &color-background-card-dark);
+    border: 1px solid $color-background-card-light;
+  }
+
+  & .tv-demo-option {
+    background: $color-background-card-light;
+  }
+}
+
+.light-mode {
+  & .tv-demo-select {
+    @include backgroundColorAndTextColor($color-background-card-dark, $color-background-card-light);
+    border: 1px solid $color-background-card-dark;
+  }
+
+  & .tv-demo-option {
+    background: $color-background-card-dark;
+  }
+}
+
+.tv-demo-body {
+  @include size(height, 100vh, min);
+  @include size(width, 80%);
+  margin: 0 auto;
+
+  &.dark-mode {
+    background-color: $color-background-card-dark;
+
+    & .tv-demo-select {
+      @include backgroundColorAndTextColor($color-background-card-light, $color-background-card-dark);
+      border: 1px solid $color-background-card-light;
+    }
+
+    & .tv-demo-option {
+      background: $color-background-card-light;
+    }
+  }
+
+  &.light-mode {
+    background-color: $color-background-card-light;
+
+    & .tv-demo-select {
+      @include backgroundColorAndTextColor($color-background-card-dark, $color-background-card-light);
+      border: 1px solid $color-background-card-dark;
+    }
+
+    & .tv-demo-option {
+      background: $color-background-card-dark;
+    }
+  }
+
+  & .tv-demo {
+    &-theme {
+      @include size(height, 100%, min);
+      @include size(width, 100%);
+      display: inline-block;
+      padding: 0 20px;
+    }
+
+    &-case {
+      padding: 0 20px 20px 20px;
+
+      &-demo {
+        & .title {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        & .demo {
+          margin-bottom: 20px;
+        }
+
+        & h2 {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &-select {
+      @include borderRadius(4px);
+      @include size(height, 40px);
+      @include size(width, 100%);
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding: 0 10px;
+      &-theme {
+        width: 150px;
+      }
+    }
+
+    &-option {
+      font-size: 16px;
+    }
+
+    &-component {
+      @extend %alignCenterFlex;
+      @include size(full, 100%);
+      margin-top: 5px;
+    }
+
+    &-no-component {
+      color: inherit;
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    &-code {
+      margin-top: 20px;
+      width: 100% !important;
+      height: auto !important;
+      padding: 20px 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tv-demo {
+    &-case {
+      padding: 0 10px 10px 10px !important;
+    }
+    &-body {
+      @include size(width, 90%);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .tv-demo {
+    &-case {
+      padding: 0 !important;
+    }
+    &-body {
+      @include size(width, 100%);
+    }
+  }
+}

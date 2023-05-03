@@ -1,0 +1,56 @@
+@mixin size($dimension, $size, $minmax: none, $sizeMin: none, $sizeMax: none) {
+  @if $dimension == width {
+    @if $minmax == min {
+      min-width: $size;
+    } @else if $minmax == wmin {
+      width: $size;
+      min-width: $sizeMin;
+    } @else if $minmax == minmax {
+      min-width: $size;
+      max-width: $size;
+    } @else if $minmax == max {
+      max-width: $size;
+    } @else if $minmax == wmax {
+      width: $size;
+      max-width: $sizeMax;
+    } @else {
+      width: $size;
+    }
+  } @else if $dimension == height {
+    @if $minmax == min {
+      min-height: $size;
+    } @else if $minmax == hmin {
+      height: $size;
+      min-height: $sizeMin;
+    } @else if $minmax == minmax {
+      min-height: $size;
+      max-height: $size;
+    } @else if $minmax == max {
+      max-height: $size;
+    } @else if $minmax == hmax {
+      height: $size;
+      max-height: $sizeMax;
+    } @else {
+      height: $size;
+    }
+  } @else if $dimension == full {
+    height: $size;
+    width: $size;
+  } @else {
+    @error "Invalid dimension specified. Please use 'width' or 'height'.";
+  }
+}
+
+@mixin backgroundColorAndTextColor($background-color, $text-color) {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+@mixin borderRadius($border-radius) {
+  border-radius: $border-radius;
+}
+
+@mixin fontFamilyAndFontSize($font-family, $font-size) {
+  font-family: $font-family;
+  font-size: $font-size;
+}
