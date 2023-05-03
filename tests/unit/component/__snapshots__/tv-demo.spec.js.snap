@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TvDemo Component Test in template matches snapshot 1`] = `
-<div class="dark-mode" inverttheme="false">
+<div class="dark-mode">
   <div class="tv-demo-body dark-mode">
     <div class="tv-demo-theme"><select class="tv-demo-select tv-demo-select-theme">
         <option class="tv-demo-option" disabled="" value="">Select theme</option>
-        <option class="tv-demo-option" value="Dark">Dark</option>
-        <option class="tv-demo-option" value="Light">Light</option>
+        <option class="tv-demo-option" value="dark">Dark</option>
+        <option class="tv-demo-option" value="light">Light</option>
       </select></div>
     <div class="tv-demo-case">
       <div class="tv-demo-case-demo">
