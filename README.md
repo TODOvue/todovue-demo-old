@@ -10,7 +10,7 @@
 <img width="600" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/imagesGit%2Ftodovue-demo.png?alt=media&token=b408f7d7-e015-4ac4-a8a1-3d23d7d09279" alt="TODOvue Demo">
 
 ## Table of Contents
-- [Demo](https://todovue-demo.netlify.app/ "Demo")
+- [Demo](https://todovue-demo.netlify.app/)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Props](#props)
@@ -33,22 +33,21 @@ Import
 ```js
 import { TvDemo } from 'todovue-demo'
 ```
-In your main.js file
+In your **main.js** file
 ```js
 import "vue-highlight-code/dist/style.css"; // Styles are imported to display the code
 ```
 
-You can also import it directly in the main.js file so you don't have to import it in the pages
+You can also import it directly in the **main.js** file, so you don't have to import it in the pages
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import "vue-highlight-code/dist/style.css";
+import "vue-highlight-code/dist/style.css"; // Styles are imported to display the code
 import TvDemo from "todovue-demo";
 
 const app = createApp(App);
 app.component("TvDemo", TvDemo);
 app.mount("#app");
-
 ```
 
 ## Usage
@@ -76,32 +75,44 @@ export default {
 };
 </script>
 ```
+It is important to wrap it in a `shallowRef` to update the component without throwing an error
+```js
+const component = shallowRef(TvButton);
+```
 
 You can create the variations of the component in the same file or import them from another file
-utlis/mocks.js
+**utlis/mocks.js**
+##### It is important that the information is sent by `propsData`, since currently it cannot be sent by slot
 ```js
 export const demos = [
   {
     id: 1,
     title: "TvButton Default",
-    propsData: { title: "Your title" },
-    html: `<MyComponent title="Your title">
-  Default Component
-</MyComponent>`, // It is necessary to create the html property, this will be displayed in the code
+    propsData: { titletextButton: "Press me!" },
+    html: `<tv-button>
+  Press me!
+</tv-button>`, // It is necessary to create the html property, this will be displayed in the code
+  },
+  {
+    id: 2,
+    title: "TvButton Default",
+    propsData: { titletextButton: "Press me!", isOutline: true },
+    html: "<tv-button titletextButton='Press me!' isOutline />",
   },
 ];
 ```
 
 ## Props
-| Name           | Type    | Default | Description                               | Required |
-|----------------|---------|---------|-------------------------------------------|----------|
-| component      | Object  |         | Component to display                      | true     |
-| variants       | Array   |         | Variations of the component               | true     |
-| hideBackground | Boolean | `false` | Hide the background of the component demo | false    |
-| demoStyle      | Object  |         | Style of the component                    | false    |
+| Name           | Type    | Default | Description                               | Required  |
+|----------------|---------|---------|-------------------------------------------|-----------|
+| component      | Object  |         | Component to display                      | `true`    |
+| variants       | Array   |         | Variations of the component               | `true`    |
+| hideBackground | Boolean | `false` | Hide the background of the component demo | `false`   |
+| demoStyle      | Object  |         | Style of the component                    | `false`   |
+| propsData      | Object  |         | Props of the component                    | `false`   |
 
 ## Customize
-You can customize the component by passing the demoStyle property
+You can customize the component by passing the `demoStyle` property
 ```js
 const demoStyle = ref({
   dark: {
