@@ -9,9 +9,6 @@ module.exports = {
     ],
   },
   plugins: [new VueLoaderPlugin()],
-  entry: {
-    umd: ["@/assets/scss/_global.scss", "@/component/TvDemo.vue"],
-  },
   output: {
     filename: "tvdemo.js",
     library: "Tvdemo",
