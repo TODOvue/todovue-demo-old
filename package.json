@@ -17,7 +17,11 @@
     "web",
     "vue",
     "vuejs",
-    "vue-js"
+    "vue-js",
+    "demo",
+    "show-demo",
+    "vue-demo",
+    "vue-demo-component"
   ],
   "bugs": {
     "url": "https://github.com/todovue/todovue-demo/issues"
