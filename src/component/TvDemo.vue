@@ -1,6 +1,10 @@
 <template>
-  <div :class="`${theme}-mode`">
-    <div class="tv-demo-body" :class="`${!hideBackground ? theme : ''}-mode`">
+  <div :class="`${theme}-mode`" :style="customStyle.body">
+    <div
+      class="tv-demo-body"
+      :class="`${!hideBackground ? theme : ''}-mode`"
+      :style="customStyle.content"
+    >
       <div class="tv-demo-theme">
         <select
           class="tv-demo-select tv-demo-select-theme"
@@ -61,6 +65,15 @@ import useDemo from "@/composable/useDemo";
 export default {
   name: "DemoPage",
   props: {
+    demoStyle: {
+      type: Object,
+      default: () => {
+        return {
+          body: {},
+          content: {},
+        };
+      },
+    },
     hideBackground: {
       type: Boolean,
       default: false,
@@ -75,8 +88,14 @@ export default {
     },
   },
   setup(props) {
-    const { selectedTheme, selectedVariantIndex, theme, toggleTheme, variant } =
-      useDemo(props);
+    const {
+      selectedTheme,
+      selectedVariantIndex,
+      theme,
+      toggleTheme,
+      variant,
+      customStyle,
+    } = useDemo(props);
 
     return {
       selectedTheme,
@@ -84,6 +103,7 @@ export default {
       theme,
       toggleTheme,
       variant,
+      customStyle,
     };
   },
   components: {

@@ -1,6 +1,6 @@
 import { computed, onMounted, ref } from "vue";
 
-const useDemo = ({ variants }) => {
+const useDemo = ({ variants, demoStyle }) => {
   const theme = ref("dark");
   const selectedVariantIndex = ref(0);
   const selectedTheme = ref("");
@@ -25,12 +25,27 @@ const useDemo = ({ variants }) => {
 
   const variant = computed(() => variants[selectedVariantIndex.value]);
 
+  const customStyle = computed(() => {
+    const style = theme.value === "dark" ? demoStyle.dark : demoStyle.light;
+    return {
+      body: {
+        backgroundColor: style?.backgroundBody,
+        color: style?.color,
+      },
+      content: {
+        backgroundColor: style?.backgroundContent,
+        color: style?.color,
+      },
+    };
+  });
+
   return {
     selectedTheme,
     selectedVariantIndex,
     theme,
     toggleTheme,
     variant,
+    customStyle,
   };
 };
 

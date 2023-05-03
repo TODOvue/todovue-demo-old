@@ -9,6 +9,7 @@
 * The option to invert the theme is removed
 * Separate the css of the component to a separate file
 * A composable is created for the demo
+* The `customStyle` property is created to customize the demo, with the background, the content and the color of the texts
 
 ## v2.3.0
 ### Dependencies Update
