@@ -1,5 +1,15 @@
 # Changelog **TODOvue Demo**
 
+## v3.0.2
+### Fixes
+* Unused dependency in `package` is removed
+* Updated readme with missing css classes
+
+## v3.0.1
+### Fixes
+* The css is corrected to be able to use the component in the demo
+* `.npmignore` is updated
+
 ## v3.0.0
 ### Dependencies Update
 * The `todovue-css` component is removed
