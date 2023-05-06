@@ -50,6 +50,15 @@ app.component("TvDemo", TvDemo);
 app.mount("#app");
 ```
 
+Add the following styles to your **App.vue** file
+```css
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+```
+
 ## Usage
 Basic use
 ```vue
